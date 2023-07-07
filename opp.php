@@ -1,3 +1,6 @@
-<?php echo "Hello World. Welcome to my hood!";  ?>
+<?php 
 
-<?php echo "Try out to see if it's working";  ?>
+echo "Welcome to my world!";
+
+
+?>
