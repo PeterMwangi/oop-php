@@ -19,14 +19,4 @@ $class_names = ['Product', 'Student', 'students'];
     }
  }
 
-
-
-
-
-
-
-
-
-
-
 ?>
