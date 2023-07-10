@@ -1,5 +1,7 @@
 <?php
 
+//classes help in oop grouping and satisfaction
+
 class Student{
 
 }
