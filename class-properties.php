@@ -2,25 +2,42 @@
 
 class Student{
 
+var $first_name;
+var $last_name;
+var $country = 'None';
 }
 
-$person1 = new Student;
+$student1 = new Student;
+$student1->first_name = 'John';
+$student1->last_name = 'Mwangi';
 
-$person2 = new Student;
+$student2 = new Student;
+$student2->first_name = 'Peter';
+$student2->last_name = 'Maina';
 
-echo get_class($person1) . "<br />";
+echo $student1->first_name . " " . $student1->last_name . "</br>";
+echo $student2->first_name . " " . $student2->last_name . "</br>";
 
-$class_names = ['Product', 'Student', 'student'];
-foreach($class_names as $class_name){
-    if(is_a($person1, $class_name)){
-        echo "Student is a {$class_name}.<br />";
-    }else{
-        echo "Student is not a {$class_name}.<br />";
-    }
+
+$class_vars = get_class_vars('Student');
+echo "Class vars:<br />";
+echo "<prev>";
+print_r($class_vars);
+echo "</prev>";
+
+
+$object_vars = get_object_vars($student1);
+echo "Object vars:<br />";
+echo "<prev>";
+print_r($object_vars);
+echo "</prev>";
+
+
+if(property_exists('Student', 'first_name')){
+    echo "Property first_name exists in Student class";
+}else{
+    echo "Property first_name does not exist in Student class";
 }
-
-//This is a class to test whether everything is working in accordance to what is expected.
-
 
 
 ?>
