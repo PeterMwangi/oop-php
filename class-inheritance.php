@@ -15,6 +15,13 @@ class User
 
 class Customer extends User
 {
+
+var $city;
+var $state;
+var $country;
+
+
+
 }
 
 $u = new User;
