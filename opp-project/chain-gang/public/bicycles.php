@@ -26,16 +26,27 @@
         <th>Price</th>
       </tr>
 
+      <?php
+
+      $args = [
+        'brand' => 'Trek', 'model' => 'Emonda', 'year' => 2017, 'category' => 'Road',
+        'gender' => 'Unisex', 'color' => 'Black', 'weight_kg' => 1.5, 'price' => 1000.00
+      ];
+      $bike = new Bicycle($args);
+
+      ?>
+
+
       <tr>
-        <td>Brand</td>
-        <td>Model</td>
-        <td>Year</td>
-        <td>Category</td>
-        <td>Gender</td>
-        <td>Color</td>
-        <td>Weight</td>
-        <td>Condition</td>
-        <td>Price</td>
+        <td><?php echo $bike->brand; ?></td>
+        <td><?php echo $bike->model; ?></td>
+        <td><?php echo $bike->year; ?></td>
+        <td><?php echo $bike->category; ?></td>
+        <td><?php echo $bike->gender; ?></td>
+        <td><?php echo $bike->color; ?></td>
+        <td><?php echo $bike->weight_kg() . '/' . h($bike->weight_lbs());; ?></td>
+        <td><?php echo $bike->condition(); ?></td>
+        <td><?php echo h(money_format('$%i', $bike->price)); ?></td>
       </tr>
 
     </table>

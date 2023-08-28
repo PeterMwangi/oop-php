@@ -33,6 +33,7 @@ class Bicycle{
         $this ->category = $args['category'] ?? '';
         $this ->description = $args['description'] ?? '';
         $this ->gender = $args['gender'] ?? '';
+        $this ->color = $args['color'] ?? '';
         $this ->price = $args['price'] ?? 0;
         $this ->weight_kg = $args['weight_kg'] ?? 0.0;
         $this ->condition_id = $args['condition_id'] ?? 3;
